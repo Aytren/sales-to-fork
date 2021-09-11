@@ -1,6 +1,5 @@
-const cookiee=""
-
-const token=""
+var cookiee=""
+var bottoken=""
 
 
 const discord=require("discord.js")
@@ -22,7 +21,7 @@ function c(meow) {
 return (meow||"0").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 var alreadystarted=false
-client.login(token)
+client.login(bottoken)
 process.on('unhandledRejection', error => {
     // Force restart in case rap data could not be fetched
 require("child_process").spawn(process.argv.shift(), process.argv, {
@@ -152,7 +151,7 @@ async function fetch_inv(cursor){
         .setTitle(x.name)
         .addField("Old Rap",c(rap[x.assetId]||"No Rap"))
         .addField("New Rap",c(x.recentAveragePrice))
-        .addField("Sale Price",c(rap[x.assetId]+(x.re centAveragePrice-rap[x.assetId])*3))
+        .addField("Sale Price",c(rap[x.assetId]+(x.recentAveragePrice-rap[x.assetId])*3))
         .setThumbnail("https://www.roblox.com/thumbs/asset.ashx?width=420&height=420&assetid=" + x.assetId)
         .setTimestamp()
         .setURL(`https://www.roblox.com/catalog/`+x.assetId)
