@@ -1,5 +1,5 @@
-var cookiee=""
-var bottoken=""
+var cookiee="1029021352"
+var bottoken="ODQwMTUyODg5NjI3NjM5ODI4.YJUDWg.JyDimnswo0yQxatjuig8TXhrjyM"
 
 
 const discord=require("discord.js")
